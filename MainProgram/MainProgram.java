@@ -1,9 +1,25 @@
-package MainProgram;
+import java.util.ArrayList;
+import edu.stanford.nlp.pipeline.CoreDocument;
+
 public class MainProgram {
 	
+	public void crawl(Crawler crawler) {
+		crawler.crawl();
+	}
+	
+	public void store(Crawler crawler) {
+		crawler.store();
+	}
+	
 	public static void main(String args[]) {
-		TwitterCrawler twitter = new TwitterCrawler();
-		twitter.crawl();
+		MainProgram program = new MainProgram();
+		Crawler twitter = new TwitterCrawlerV2();
+		//RedditCrawler reddit = new RedditCrawler();
+		program.crawl(twitter);
+		//program.crawl(reddit);
+		program.store(twitter);
+		//program.store(reddit);
 	}
 	
 }
+
