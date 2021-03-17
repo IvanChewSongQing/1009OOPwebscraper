@@ -1,7 +1,5 @@
-package MainProgram;
-
-public abstract class Crawl {
-	
+public abstract class Crawler implements Database {
+		
 	public abstract void crawl();
 
 }
