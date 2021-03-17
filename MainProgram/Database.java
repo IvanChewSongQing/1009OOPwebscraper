@@ -1,8 +1,8 @@
-package MainProgram;
-import twitter4j.Status;
-
 interface Database {
 	
-	public void store(Status tweet);
+	public abstract void store();
+	
+	//public abstract void store(reddit);
+
 
 }
